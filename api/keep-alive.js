@@ -1,7 +1,7 @@
 const { timingSafeEqual } = require("node:crypto");
 
 const DEFAULT_RENDER_URL = "https://shop-seed-art.onrender.com/healthz";
-const REQUEST_TIMEOUT_MS = 10000;
+const REQUEST_TIMEOUT_MS = 90000;
 
 module.exports = async function handler(req, res) {
   if (req.method !== "GET") {

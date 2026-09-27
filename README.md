@@ -48,7 +48,7 @@ Then call the local endpoint in a second terminal:
 curl.exe -i http://localhost:3000/api/keep-alive -H "Authorization: Bearer replace-with-a-long-random-value"
 ```
 
-If `KEEPALIVE_SECRET` is unset, omit the Authorization header. A successful check returns HTTP 200 and JSON with `success`, `target`, `renderStatus`, `responseTimeMs`, and `timestamp`. Non-2xx Render responses and network failures return an unsuccessful JSON response; a timeout returns HTTP 504.
+If `KEEPALIVE_SECRET` is unset, omit the Authorization header. A successful check returns HTTP 200 and JSON with `success`, `target`, `renderStatus`, `responseTimeMs`, and `timestamp`. Non-2xx Render responses and network failures return an unsuccessful JSON response; a timeout returns HTTP 504. The upstream request timeout is 90 seconds to allow for a Render Free service cold start, which can take about one minute.
 
 ## Deploy to Vercel
 
