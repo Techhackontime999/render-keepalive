@@ -1,4 +1,6 @@
-# Shop Seed Art Render Keepalive
+# render-keepalive
+
+## Shop Seed Art Render Keepalive
 
 A minimal Vercel serverless endpoint that checks the Render service's `/healthz` endpoint when called. An external scheduler can call this endpoint every 10 minutes to help keep the Render Free Tier service active. This project does not run its own scheduler.
 
